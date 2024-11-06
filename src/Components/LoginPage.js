@@ -27,6 +27,8 @@ const LoginPage = (props) => {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const navigate = useNavigate();
+  localStorage.clear("isLoggedIn");
+
   const handleSubmit = () => {
     if (validateForm()) {
       setEroor(true);
@@ -35,6 +37,7 @@ const LoginPage = (props) => {
       props.setFlag(true);
     }
   };
+
   const validateForm = () => {
     if (name === "" || password === "") {
       return true;
