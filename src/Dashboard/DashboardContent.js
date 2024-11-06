@@ -10,6 +10,10 @@ import React from "react";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import chartImg from "../Dashboard/pie-chart.png";
+import WORDS from "../assets/themes/words/words";
+import THEMES from "../assets/themes/themes";
+import Dropdown from "../Components/DropdownMenuBar";
+import DropdownMenuBar from "../Components/DropdownMenuBar";
 const DashboardContent = () => {
   return (
     <Container maxWidth={false} sx={{ m: 0, backgroundColor: "#f0f0f1" }}>
@@ -31,16 +35,18 @@ const DashboardContent = () => {
             ml: 8,
           }}
         >
-          Dashboard Details
+          {WORDS.dashboardDetails}
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Typography fontWeight={"bold"}>Dashboard</Typography>
+        <Box sx={{ display: "flex", alignItems: "center", mr: 11 }}>
+          <Typography fontWeight={"bold"}>{WORDS.dashboard}</Typography>
           <ArrowForwardIosIcon fontSize="'small'" sx={{ mx: 2 }} />
-          <Typography>Dashboard Details</Typography>
+          <Typography> {WORDS.dashboardDetails}</Typography>
         </Box>
       </Box>
 
       <Box sx={{ display: "flex" }}>
+        {/* my portfoilio */}
+
         <Box sx={{ width: "20%", ml: 8 }}>
           <Paper sx={{ px: 2, pb: 2, width: "97%" }}>
             <Box
@@ -54,93 +60,95 @@ const DashboardContent = () => {
                 variant="h5"
                 sx={{
                   fontWeight: "bold",
-                  fontSize: "0.9rem",
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: THEMES.fontFamily.regular,
+                  fontSize: THEMES.fonts.small,
                   py: 1,
                   ml: 1,
                 }}
               >
-                MY Portfolio
+                {WORDS.MYPortfolio}
               </Typography>
 
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 <Checkbox size="small" />
                 <Typography
                   sx={{
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                     fontSize: ".81rem",
                     fontWeight: "600",
                     ml: 0,
                     letterSpacing: "-0.01rem",
                   }}
                 >
-                  Show Real
+                  {WORDS.ShowReal}
                 </Typography>
               </Box>
             </Box>
             <Box>
-              <img src={chartImg} alt="" style={{width:'100%'}} />
+              <img src={chartImg} alt="" style={{ width: "100%" }} />
             </Box>
 
             <div className="list-container">
               <div className="inside-list-container">
                 <Avatar sx={{ m: 1 }}>R</Avatar>
-                <Typography>Roku</Typography>
+                <Typography>{WORDS.Roku}</Typography>
               </div>
 
               <div>
-                <Typography>-0.077%</Typography>
+                <Typography sx={{ color: "red" }}>-0.077%</Typography>
               </div>
             </div>
 
             <div className="list-container">
               <div className="inside-list-container">
                 <Avatar sx={{ m: 1 }}>R</Avatar>
-                <Typography>Roku</Typography>
+                <Typography>{WORDS.Roku}</Typography>
               </div>
 
               <div>
-                <Typography>-0.077%</Typography>
+                <Typography sx={{ color: "red" }}>-0.077%</Typography>
               </div>
             </div>
 
             <div className="list-container">
               <div className="inside-list-container">
                 <Avatar sx={{ m: 1, backgroundColor: "orange" }}>E</Avatar>
-                <Typography>Roku</Typography>
+                <Typography>{WORDS.Etsy}</Typography>
               </div>
 
               <div>
-                <Typography>-0.077%</Typography>
+                <Typography sx={{ color: "#00c853" }}>0.077%</Typography>
               </div>
             </div>
 
             <div className="list-container">
               <div className="inside-list-container">
                 <Avatar sx={{ m: 1, backgroundColor: "orange" }}>E</Avatar>
-                <Typography>Roku</Typography>
+                <Typography>{WORDS.Etsy}</Typography>
               </div>
 
               <div>
-                <Typography>-0.077%</Typography>
+                <Typography sx={{ color: "#00c853" }}>0.099%</Typography>
               </div>
             </div>
 
             <div className="list-container">
               <div className="inside-list-container">
                 <Avatar sx={{ m: 1 }}>C</Avatar>
-                <Typography>Roku</Typography>
+                <Typography>{WORDS.Cnq}</Typography>
               </div>
 
               <div>
-                <Typography>-0.077%</Typography>
+                <Typography sx={{ color: "#00c853" }}>0.097%</Typography>
               </div>
             </div>
           </Paper>
         </Box>
 
+        {/* change box */}
+
         <Box sx={{ display: "flex", width: "75%" }}>
-          <Paper sx={{ ml: 6, width: "20%", height: "13%", display: "flex" }}>
+          <Paper sx={{ ml: 6, width: "21%", height: "13%", display: "flex" }}>
             <Box
               sx={{
                 display: "flex",
@@ -164,15 +172,15 @@ const DashboardContent = () => {
                 <Typography
                   sx={{
                     fontSize: "0.7rem",
-                    color: "GrayText",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: "500",
+                    fontFamily: THEMES.fontFamily.regular,
                   }}
                 >
-                  Total Change
+                  {WORDS.totalChange}
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                     fontWeight: "bold",
                   }}
                 >
@@ -181,7 +189,7 @@ const DashboardContent = () => {
               </Box>
             </Box>
           </Paper>
-          <Paper sx={{ ml: 3, width: "20%", height: "13%", display: "flex" }}>
+          <Paper sx={{ ml: 3, width: "21%", height: "13%", display: "flex" }}>
             <Box
               sx={{
                 display: "flex",
@@ -209,12 +217,12 @@ const DashboardContent = () => {
                     fontFamily: "Montserrat, sans-serif",
                   }}
                 >
-                  Year Change
+                  {WORDS.yearChange}
                 </Typography>
                 <Typography
                   sx={{
                     fontWeight: "bold",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                   }}
                 >
                   $478,416.55
@@ -222,7 +230,7 @@ const DashboardContent = () => {
               </Box>
             </Box>
           </Paper>
-          <Paper sx={{ ml: 3, width: "20%", height: "13%", display: "flex" }}>
+          <Paper sx={{ ml: 3, width: "21%", height: "13%", display: "flex" }}>
             <Box
               sx={{
                 display: "flex",
@@ -247,15 +255,15 @@ const DashboardContent = () => {
                   sx={{
                     fontSize: "0.7rem",
                     fontWeight: "500",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                   }}
                 >
-                  Month Change
+                  {WORDS.monthChange}
                 </Typography>
                 <Typography
                   sx={{
                     fontWeight: "bold",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                   }}
                 >
                   -$3.22
@@ -263,7 +271,7 @@ const DashboardContent = () => {
               </Box>
             </Box>
           </Paper>
-          <Paper sx={{ ml: 3, width: "20%", height: "13%", display: "flex" }}>
+          <Paper sx={{ ml: 3, width: "21%", height: "13%", display: "flex" }}>
             <Box
               sx={{
                 display: "flex",
@@ -288,15 +296,15 @@ const DashboardContent = () => {
                   sx={{
                     fontSize: "0.7rem",
                     fontWeight: "500",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                   }}
                 >
-                  Day Change
+                  {WORDS.dayChange}
                 </Typography>
                 <Typography
                   sx={{
                     fontWeight: "bold",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: THEMES.fontFamily.regular,
                   }}
                 >
                   -$3.22
