@@ -7,8 +7,6 @@ import MyTrades from "./Dashboard/MyTrades";
 import Navbar from "./Dashboard/Navbar";
 import Dashboard from "./Dashboard/Dashboard";
 import { useEffect, useState } from "react";
-import CreateTrade from "./Components/CreateTrade";
-import Accountdetails from "./Components/Accountdetails";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -25,23 +23,15 @@ function App() {
       <BrowserRouter>
         {isLoggedIn && (
           <>
-            <Navbar setFlag={setIsLoggedIn} />
+            <Navbar />
             <Dashboard />
           </>
         )}
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<LoginPage setFlag={setIsLoggedIn} />}
-          />
+          <Route exact path="/" element={<LoginPage setFlag={setIsLoggedIn} />} />
           <Route exact path="/forget-password" element={<Forgetpassword />} />
           <Route exact path="/dashboard" element={<Main />} />
           <Route exact path="/my-trades" element={<MyTrades />} />
-          <Route exact path="/create-trade" element={<CreateTrade />} />
-          <Route exact path="/account-details" element={<Accountdetails />} />
-      
-
         </Routes>
       </BrowserRouter>
     </>

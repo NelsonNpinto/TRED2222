@@ -12,6 +12,14 @@
 }
 
 
+
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
 h1,
 h2,
 h3,
@@ -43,63 +51,7 @@ h6 {
 .inside-list-container {
     display: flex;
     align-items: center;
-    cursor: pointer;
-}
-
-.custom-columns {
-    font-size: 1rem;
-    margin: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.custom-active {
-    color: #1a73e8;
-    margin: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.outline {
-    border: 1px solid rgb(179, 172, 172);
-    height: 65px;
-    display: flex;
-    align-items: center;
-}
-
-.searchicon {
-    width: 191px;
-}
 
 
-.comment-Table {
-    width: 100%;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
-    font-weight: 600;
-    font-size: 1.2rem
-}
 
-.comment-Table td,
-th {
-    border: 1px solid #ddd;
-}
-
-th,
-td {
-    padding: 15px;
-    width: 20%;
-}
-
-.comment-Table li {
-    list-style: none;
-}
-
-.comment-Table th {
-    background-color: rgb(229, 231, 231);
-    font-weight: 900;
-    font-size: 1.3rem
 }

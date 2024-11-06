@@ -14,7 +14,6 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import WORDS   from '../assets/themes/words/words';
 
 
 const Dashboard = () => {
@@ -46,7 +45,7 @@ const Dashboard = () => {
                   }}
                 >
                   <Typography color="black" fontWeight={600}>
-                    {WORDS.dashboard}
+                    Dashboard
                   </Typography>
                 </NavLink>
               </Box>
@@ -61,7 +60,7 @@ const Dashboard = () => {
               <ShowChartIcon sx={{ fontSize: "1.3rem", mr: 1 }} />
               <Box>
                 <Typography color="black" fontWeight={600}>
-                  {WORDS.MyTrades}
+                  MyTrades
                 </Typography>
               </Box>
             </IconButton>
@@ -74,7 +73,7 @@ const Dashboard = () => {
               <SearchIcon sx={{ fontSize: "1.3rem", mr: 1 }} />
               <Box>
                 <Typography color="black" fontWeight={600}>
-                  {WORDS.research}
+                  Research
                 </Typography>
               </Box>
               <KeyboardArrowDownIcon />
@@ -90,7 +89,7 @@ const Dashboard = () => {
               />
               <Box>
                 <Typography color="black" fontWeight={600}>
-                  {WORDS.charts}
+                  Charts
                 </Typography>
               </Box>
             </IconButton>
@@ -103,7 +102,7 @@ const Dashboard = () => {
               <SummarizeOutlinedIcon sx={{ fontSize: "1.3rem", mr: 1 }} />
               <Box>
                 <Typography color="black" fontWeight={600}>
-                  {WORDS.reports}
+                  Reports
                 </Typography>
               </Box>
             </IconButton>
@@ -116,7 +115,7 @@ const Dashboard = () => {
               <LayersOutlinedIcon sx={{ fontSize: "1.3rem", mr: 1 }} />
               <Box>
                 <Typography color="black" fontWeight={600}>
-                  {WORDS.resources}
+                  Resources
                 </Typography>
               </Box>
             </IconButton>
@@ -131,7 +130,7 @@ const Dashboard = () => {
 
                 <Box>
                   <Typography color="black" fontWeight={600}>
-                    {WORDS.admin}
+                    Admin
                   </Typography>
                 </Box>
               </Badge>
